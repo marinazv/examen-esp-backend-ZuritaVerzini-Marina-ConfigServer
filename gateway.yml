@@ -9,14 +9,14 @@ cloud:
       locator:
         enable: true
     routes:
-      id: am
-      url: lb://api-movie
-      predicates:
-        path= /api/v1/movies/**
-      id: ac
-      url: lb://api-catalog
-      predicates:
-        path= /api/v1/catalog/**
+      - id: am
+        url: lb://api-movie
+        predicates:
+          - path= /api/v1/movies/**
+      - id: ac
+        url: lb://api-catalog
+        predicates:
+          - path= /api/v1/catalog/**
 info:
   app:
     name: gateway
