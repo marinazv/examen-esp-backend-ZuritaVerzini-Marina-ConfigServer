@@ -10,11 +10,11 @@ cloud:
         enable: true
     routes:
       - id: am
-        url: lb://api-movie
+        uri: lb://api-movie
         predicates:
           - path= /api/v1/movies/**
       - id: ac
-        url: lb://api-catalog
+        uri: lb://api-catalog
         predicates:
           - path= /api/v1/catalog/**
 info:
