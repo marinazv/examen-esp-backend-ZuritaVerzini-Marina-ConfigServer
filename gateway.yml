@@ -9,11 +9,11 @@ cloud:
       locator:
         enable: true
     routes:
-      id:
+      id: apiMovie
       url: lb://api-movie
       predicates:
         path= /api/v1/movies/**
-      id:
+      id: apiCatalog
       url: lb://api-catalog
       predicates:
         path= /api/v1/catalog/**
