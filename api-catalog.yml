@@ -3,6 +3,15 @@ server:
 spring:
   application:
     name: api-catalog
+  zipkin:
+    baseUrl: http://localhost:9411/
+  data:
+    mongodb:
+      database: catalog
+      port: 27019
+      authentication-database: admin
+      username: user
+      password: password
 info:
   application:
     name: api-catalog
